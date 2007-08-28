@@ -49,7 +49,6 @@ make DESTDIR=%buildroot install
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=OpenAlchemist
 Comment= Free Clone of Naturalchimie
 Exec=%{_bindir}/%name/%{name} 
