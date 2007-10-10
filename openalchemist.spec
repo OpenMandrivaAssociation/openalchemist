@@ -52,7 +52,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=OpenAlchemist
 Comment= Free Clone of Naturalchimie
 Exec=%{_bindir}/%name/%{name} 
-Icon=strategy_section.png
+Icon=strategy_section
 Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Games-Puzzles;Game;LogicGame;BlocksGame;
