@@ -8,7 +8,6 @@ Url:           http://openalchemist.sourceforge.net/index.html
 Source:        %name-%version-src.tar.gz 
 Patch0:        %name-%version-fix-build.patch
 Patch1:        %name-%version-fixMakefile.patch
-BuildRoot:     %{_tmppath}/%{name}-buildroot
 
 BuildRequires: clanlib-devel >= 0.8 
 BuildRequires: zip
