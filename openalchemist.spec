@@ -1,6 +1,6 @@
 Name:          openalchemist
 Version:       0.2
-Release:       %mkrel 2
+Release:       %mkrel 4
 Summary:       Free clone of naturalchimie
 License:       GPL
 Group:         Games/Strategy
