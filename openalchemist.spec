@@ -1,13 +1,13 @@
 Name:          openalchemist
 Version:       0.2
-Release:       %mkrel 4
+Release:       %mkrel 5
 Summary:       Free clone of naturalchimie
-License:       GPL
+License:       GPLv2+
 Group:         Games/Strategy
 Url:           http://openalchemist.sourceforge.net/index.html
-Source:        %name-%version-src.tar.gz 
-Patch0:        %name-%version-fix-build.patch
-Patch1:        %name-%version-fixMakefile.patch
+Source:        http://nchc.dl.sourceforge.net/sourceforge/openalchemist/%name-%version-src.tar.gz 
+Patch0:        openalchemist-0.2-fix-build.patch
+Patch1:        openalchemist-0.2-fixMakefile.patch
 BuildRoot:     %{_tmppath}/%{name}-buildroot
 
 BuildRequires: clanlib-devel >= 0.8 
@@ -31,18 +31,16 @@ Commons for graphics).
 
 
 %prep
-rm -rf %buildroot
-
 %setup -q -n %name-%version-src
 %patch0 -p0
 %patch1 -p0
 
 %build
-
 %make 
 
 %install
-make DESTDIR=%buildroot install
+rm -fr %buildroot
+%makeinstall_std
 
 #XDG Menu
 
@@ -50,15 +48,13 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=OpenAlchemist
-Comment= Free Clone of Naturalchimie
-Exec=%{_bindir}/%name/%{name} 
+Comment=Free Clone of Naturalchimie
+Exec=%{_gamesbindir}/%name/%{name} 
 Icon=strategy_section
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-MoreApplications-Games-Puzzles;Game;LogicGame;BlocksGame;
+Categories=Game;LogicGame;BlocksGame;
 EOF
 
 %clean
 rm -rf %buildroot
-
-
