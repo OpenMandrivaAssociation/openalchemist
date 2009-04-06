@@ -1,9 +1,9 @@
 Name:          openalchemist
 Version:       0.3
-Release:       %mkrel 1
+Release:       %mkrel 2
 Summary:       Free clone of naturalchimie (puzzle game)
 License:       GPLv2+
-Group:         Games/Strategy
+Group:         Games/Puzzles
 URL:           http://openalchemist.sourceforge.net/index.html
 Source:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz 
 BuildRoot:     %{_tmppath}/%{name}-buildroot
