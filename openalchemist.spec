@@ -1,6 +1,6 @@
 Name:          openalchemist
 Version:       0.3
-Release:       %mkrel 3
+Release:       %mkrel 4
 Summary:       Free clone of naturalchimie (puzzle game)
 License:       GPLv2+
 Group:         Games/Puzzles
