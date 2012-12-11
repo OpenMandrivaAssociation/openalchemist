@@ -1,14 +1,13 @@
-Name:          openalchemist
-Version:       0.3
-Release:       %mkrel 4
-Summary:       Free clone of naturalchimie (puzzle game)
-License:       GPLv2+
-Group:         Games/Puzzles
-URL:           http://openalchemist.sourceforge.net/index.html
-Source:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz 
-BuildRoot:     %{_tmppath}/%{name}-buildroot
-BuildRequires: clanlib-devel >= 0.8 
-BuildRequires: zip
+Name:		openalchemist
+Version:	0.3
+Release:	4
+Summary:	Free clone of naturalchimie (puzzle game)
+License:	GPLv2+
+Group:		Games/Puzzles
+URL:		http://openalchemist.sourceforge.net/index.html
+Source:		http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz 
+BuildRequires:	clanlib0.8-devel
+BuildRequires:	zip
 
 %description
 OpenAlchemist is a new game project developed with C++ language and 
@@ -25,7 +24,6 @@ Commons for graphics).
 %make 
 
 %install
-rm -fr %{buildroot}
 %makeinstall_std
 
 #Menu
@@ -41,12 +39,10 @@ Type=Application
 Categories=Game;LogicGame;BlocksGame;
 EOF
 
-%clean
-rm -rf %{buildroot}
-
 %files 
 %defattr(-,root,root,0755)
 %{_gamesbindir}/%{name}
 %{_gamesbindir}/%{name}-config
 %{_gamesdatadir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
+
