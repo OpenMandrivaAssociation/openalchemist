@@ -4,7 +4,7 @@ Release:	5
 Summary:	Free clone of naturalchimie (puzzle game)
 License:	GPLv2+
 Group:		Games/Puzzles
-URL:		http://openalchemist.sourceforge.net/index.html
+URL:		https://openalchemist.sourceforge.net/index.html
 Source:		http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz 
 BuildRequires:	clanlib0.8-devel
 BuildRequires:	zip
