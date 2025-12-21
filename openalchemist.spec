@@ -6,6 +6,11 @@ License:	GPLv2+
 Group:		Games/Puzzles
 URL:		https://openalchemist.sourceforge.net/index.html
 Source:		http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.gz 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	clanlib0.8-devel
 BuildRequires:	zip
 
